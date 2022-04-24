@@ -15,7 +15,7 @@ public class Main {
 		allStudents = new LinkedList<Student>();
 		
 		//Call the readFile() method and provide an error message if this method returns false
-		if(readFile("/Users/Jenniphoneupdate/Desktop/Assignmnet 1/studentdata.txt")) {
+		if(readFile("//studentdata.txt//")) {
 			//execute program
 			
 			while (true) {

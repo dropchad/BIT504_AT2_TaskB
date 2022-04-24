@@ -317,8 +317,20 @@ public class Main {
 		boolean testLoop = true;
 		while(testLoop) {
 			//Asks the user to enter an ID
+			//Checks that the ID entered is a interger greater than 0
 			System.out.println("What is the student ID?");
-			int studentId = scanner.nextInt();
+			while (true) {
+			         try {
+			        	 int studentId = scanner.nextInt();
+			            if(studentId > 0){
+			              break;
+			            }
+			    System.out.println("Enter a valid ID");
+						 
+			         } catch (InputMismatchException e) {
+			            System.out.println("You did not enter an integer.");
+			            scanner.nextLine(); 
+				     }
 			
 			//removes the student with that ID in the LinkedList
 			for (Student removeStudent : allStudents) {
